@@ -72,13 +72,20 @@ export default {
         this.err = true;
         this.errMsg = "must fill both inputs";
       }else{
-        this.err = false;
-        //aca se agrega un score cuando apretas enter
-        const resp = await axios.post(baseUrl, { user: this.newUserName, score: Number(this.newScore)});
-        this.scores = [...this.scores, resp.data];
-        this.newScore = "";
-        this.newUserName = "";
-        await this.getHighScores();
+
+        if(isNaN(this.newScore)){
+          this.err = true;
+          this.errMsg = "score must be a number";
+        }else{
+          this.err = false;
+          //aca se agrega un score cuando apretas enter
+          const resp = await axios.post(baseUrl, { user: this.newUserName, score: Number(this.newScore)});
+          this.scores = [...this.scores, resp.data];
+          this.newScore = "";
+          this.newUserName = "";
+          await this.getHighScores();
+        }
+
       }
     }
   }
