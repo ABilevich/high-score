@@ -2,27 +2,38 @@
   "scores": [
     {
       "id": 0,
-      "value": 123
+      "user": "pepito",
+      "score": 6969
     },
     {
       "id": 1,
-      "value": 111
+      "user": "carlitos",
+      "score": 270
     },
     {
       "id": 2,
-      "value": 1343
+      "user": "marcelo",
+      "score": 420
     },
     {
-      "value": "12345",
+      "user": "asda",
+      "score": null,
       "id": 3
     },
     {
-      "value": "1234",
+      "user": "",
+      "score": 0,
       "id": 4
     },
     {
-      "value": 1333,
+      "user": "pepe",
+      "score": 123132,
       "id": 5
+    },
+    {
+      "user": "Pepe",
+      "score": 123123,
+      "id": 6
     }
   ]
 }
